@@ -1,6 +1,6 @@
 # generator-jhipster-leaflet
 
-> Install a sample of ui/leaflet maps on your JHipster application.
+> Install a sample of ui-leaflet maps on your JHipster application.
 
 ## Credits
 
