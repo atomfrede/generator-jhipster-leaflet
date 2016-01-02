@@ -14,13 +14,18 @@ var jhipsterFunc = {};
 
 module.exports = yeoman.generators.Base.extend({
 
-  templates: function() {
-    this.composeWith('jhipster:modules', {
-      options: {
-        jhipsterVar: jhipsterVar,
-        jhipsterFunc: jhipsterFunc
+  initializing: {
+    templates: function(args) {
+      this.composeWith('jhipster:modules', {
+        options: {
+          jhipsterVar: jhipsterVar,
+          jhipsterFunc: jhipsterFunc
+        }
+      });
+      if (args == 'default') {
+        this.leafletDefault = 'default';
       }
-    });
+    }
   },
 
   prompting: function() {
@@ -33,19 +38,23 @@ module.exports = yeoman.generators.Base.extend({
 
     var questions = 1;
 
-    var prompts = [{
-      type: 'confirm',
-      name: 'addLeaflet',
-      message: '(1/' + questions + ') Do you want to add ui-leaflet maps?',
-      default: true
-    }];
+    if (this.leafletDefault == 'default') {
+      this.props = {};
+      this.props.addLeaflet = true;
+    } else {
+      var prompts = [{
+        type: 'confirm',
+        name: 'addLeaflet',
+        message: '(1/' + questions + ') Do you want to add ui-leaflet maps?',
+        default: true
+      }];
 
-    this.prompt(prompts, function(props) {
-      this.props = props;
-      // To access props later use this.props.someOption;
-
-      done();
-    }.bind(this));
+      this.prompt(prompts, function(props) {
+        this.props = props;
+        // To access props later use this.props.someOption;
+        done();
+      }.bind(this));
+    }
   },
 
   writing: function() {
