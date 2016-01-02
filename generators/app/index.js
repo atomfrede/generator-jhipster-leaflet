@@ -2,6 +2,7 @@
 var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
 var yosay = require('yosay');
+var packagejs = require(__dirname + '/../../package.json');
 
 // Stores JHipster variables
 var jhipsterVar = {
@@ -51,7 +52,7 @@ module.exports = yeoman.generators.Base.extend({
     var done = this.async();
 
     // if no selection, do nothing
-    if (!this.addLeaflet) {
+    if (!this.props.addLeaflet) {
       this.log('Nothing to do...');
       return;
     }
@@ -63,6 +64,7 @@ module.exports = yeoman.generators.Base.extend({
     var webappDir = jhipsterVar.webappDir;
 
     jhipsterFunc.addBowerDependency('ui-leaflet', '1.0.0');
+    jhipsterFunc.addBowerDependency('leaflet-search', '1.8.4');
 
     jhipsterFunc.addAngularJsModule('nemLogging');
     jhipsterFunc.addAngularJsModule('ui-leaflet');

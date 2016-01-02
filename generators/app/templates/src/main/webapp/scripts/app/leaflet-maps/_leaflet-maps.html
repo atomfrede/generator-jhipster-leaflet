@@ -1,9 +1,12 @@
 <div ng-cloak>
   <h2>
-    <span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Google maps</h2>
+    <span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Leaflet maps</h2>
   <hr>
   <div class="row">
     <div class="col-sm-9">
+      <leaflet lf-center="center" width="100%" height="480px"></leaflet>
+
+      <button class="btn btn-primary" ng-click="center.autoDiscover=true">Discover position</button>
     </div>
   </div>
 </div>
