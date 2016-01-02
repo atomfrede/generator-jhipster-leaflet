@@ -18,6 +18,8 @@ yo jhipster-leaflet
 
 ## Usage
 
+![](usage.gif)
+
 ![resulting html][result-image]
 
 ## Angular Leaflet Maps
