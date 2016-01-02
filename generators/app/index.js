@@ -41,6 +41,7 @@ module.exports = yeoman.generators.Base.extend({
     if (this.leafletDefault == 'default') {
       this.props = {};
       this.props.addLeaflet = true;
+      done();
     } else {
       var prompts = [{
         type: 'confirm',
