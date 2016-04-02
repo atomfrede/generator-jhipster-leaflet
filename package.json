@@ -1,6 +1,6 @@
 {
   "name": "generator-jhipster-leaflet",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "JHipster module to install a sample of ui-leaflet maps on your JHipster application.",
   "homepage": "https://github.com/atomfrede/generator-jhipster-leaflet",
   "author": "Frederik Hahne <atomfrede@gmail.com> (http://atomfrede.github.com/shiny-adventure/)",
@@ -16,7 +16,7 @@
     "yeoman-generator": "0.21.1",
     "chalk": "1.0.0",
     "yosay": "1.0.2",
-    "generator-jhipster": ">=2.26.0"
+    "generator-jhipster": ">=3.0.0"
   },
   "devDependencies": {
     "yeoman-assert": "2.0.0",

@@ -74,21 +74,18 @@ module.exports = yeoman.generators.Base.extend({
     var webappDir = jhipsterVar.webappDir;
 
     jhipsterFunc.addBowerDependency('ui-leaflet', '1.0.0');
-    jhipsterFunc.addBowerDependency('leaflet-search', '1.8.4');
+    jhipsterFunc.addBowerDependency('leaflet-search', '1.8.5');
 
     jhipsterFunc.addAngularJsModule('nemLogging');
     jhipsterFunc.addAngularJsModule('ui-leaflet');
 
     // Sample page
-    this.template('src/main/webapp/scripts/app/leaflet-maps/_leaflet-maps.controller.js', webappDir + 'scripts/app/leaflet-maps/leaflet-maps.controller.js');
-    jhipsterFunc.addJavaScriptToIndex('app/leaflet-maps/leaflet-maps.controller.js');
-    this.template('src/main/webapp/scripts/app/leaflet-maps/_leaflet-maps.html', webappDir + 'scripts/app/leaflet-maps/leaflet-maps.html');
-    this.template('src/main/webapp/scripts/app/leaflet-maps/_leaflet-maps.js', webappDir + 'scripts/app/leaflet-maps/leaflet-maps.js');
-    jhipsterFunc.addJavaScriptToIndex('app/leaflet-maps/leaflet-maps.js');
+    this.template('src/main/webapp/app/leaflet-maps/_leaflet-maps.controller.js', webappDir + 'app/leaflet-maps/leaflet-maps.controller.js');
+    this.template('src/main/webapp/app/leaflet-maps/_leaflet-maps.html', webappDir + 'app/leaflet-maps/leaflet-maps.html');
+    this.template('src/main/webapp/app/leaflet-maps/_leaflet-maps.state.js', webappDir + 'app/leaflet-maps/leaflet-maps.state.js');
     jhipsterFunc.addElementToMenu('leaflet-maps', 'globe', false);
 
     done();
-
 
   },
 
