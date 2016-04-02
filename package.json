@@ -10,7 +10,9 @@
   "main": "generators/index.js",
   "keywords": [
     "yeoman-generator",
-    "jhipster-module"
+    "jhipster-module",
+    "leaflet",
+    "angular"
   ],
   "dependencies": {
     "yeoman-generator": "0.21.1",
