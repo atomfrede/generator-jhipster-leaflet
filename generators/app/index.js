@@ -74,7 +74,7 @@ module.exports = yeoman.generators.Base.extend({
     var webappDir = jhipsterVar.webappDir;
 
     jhipsterFunc.addBowerDependency('ui-leaflet', '1.0.0');
-    jhipsterFunc.addBowerDependency('leaflet-search', '1.8.5');
+    jhipsterFunc.addBowerDependency('leaflet-search', '1.8.4');
 
     jhipsterFunc.addAngularJsModule('nemLogging');
     jhipsterFunc.addAngularJsModule('ui-leaflet');
@@ -91,14 +91,8 @@ module.exports = yeoman.generators.Base.extend({
 
   install: function() {
     var injectDependenciesAndConstants = function() {
-      switch (this.frontendBuilder) {
-        case 'gulp':
-          this.spawnCommand('gulp', ['ngconstant:dev', 'wiredep:test', 'wiredep:app']);
-          break;
-        case 'grunt':
-        default:
-          this.spawnCommand('grunt', ['ngconstant:dev', 'wiredep']);
-      }
+        this.spawnCommand('gulp', ['install']);
+        break;
     };
 
     this.installDependencies({
