@@ -8,7 +8,7 @@
   stateConfig.$inject = ['$stateProvider'];
 
   function stateConfig($stateProvider) {
-    $stateProvider.state('entity-audit', {
+    $stateProvider.state('leaflet-maps', {
       parent: 'app',
       url: '/leaflet-maps',
       data: {
