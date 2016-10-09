@@ -1,6 +1,6 @@
 {
   "name": "generator-jhipster-leaflet",
-  "version": "0.1.3",
+  "version": "1.0.0",
   "description": "JHipster module to install a sample of ui-leaflet maps on your JHipster application.",
   "homepage": "https://github.com/atomfrede/generator-jhipster-leaflet",
   "author": "Frederik Hahne <atomfrede@gmail.com> (http://atomfrede.github.com/shiny-adventure/)",

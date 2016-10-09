@@ -73,8 +73,8 @@ module.exports = yeoman.generators.Base.extend({
     this.frontendBuilder = jhipsterVar.frontendBuilder;
     var webappDir = jhipsterVar.webappDir;
 
-    jhipsterFunc.addBowerDependency('ui-leaflet', '1.0.0');
-    jhipsterFunc.addBowerDependency('leaflet-search', '1.8.4');
+    jhipsterFunc.addBowerDependency('ui-leaflet', '2.0.0');
+    jhipsterFunc.addBowerDependency('leaflet-search', '2.7.0');
 
     jhipsterFunc.addAngularJsModule('nemLogging');
     jhipsterFunc.addAngularJsModule('ui-leaflet');
