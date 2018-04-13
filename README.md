@@ -1,5 +1,11 @@
 # generator-jhipster-leaflet [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
 
+## Deprecattion Notice
+
+This module has not been updated to work with latest JHipster Versions. In Particular there is no angular-x support. There is another module being compatible with angular-x and newer jhipster versions: https://github.com/ultratrail/generator-jhipster-leafletmap
+
+I strongly advice to use that one!
+
 > Install a sample of ui-leaflet maps on your JHipster application.
 
 ## Installation
